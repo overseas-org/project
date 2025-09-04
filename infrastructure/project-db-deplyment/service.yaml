@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-db
+  labels:
+    app: project-db
+    service: project
+spec:
+  selector:
+    app: project-db
+    service: project
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+  type: ClusterIP
