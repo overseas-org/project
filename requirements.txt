@@ -1,2 +1,4 @@
 flask
 pytest
+crud_mysql
+mysql_database

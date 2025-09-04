@@ -22,4 +22,14 @@ spec:
         image: hhana982/project:0.1.<version>
         ports:
         - containerPort: 5000
-        env: 
+        env:
+        - name: DATABASE_HOST
+          value: '127.0.0.1'
+        - name: DATABASE_PORT
+          value: 3308
+        - name: DATABASE_USER
+          value: 'root'
+        - name: DATABASE_PASSWORD
+          value: 'rootpw'
+        - name: DATABASE_NAME
+          value: 'project'
