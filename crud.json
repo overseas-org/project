@@ -1,0 +1,10 @@
+{
+    "project": {
+        "allowd_methods": ["GET", "POST", "DELETE", "PUT"],
+        "fetch_all": "true",
+        "schema": {
+            "name": "VARCHAR(100)",
+            "account_id": "INT"
+        }
+    }
+}
