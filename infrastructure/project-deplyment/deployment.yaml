@@ -27,7 +27,7 @@ spec:
         ports:
         - containerPort: 5000
         volumeMounts:
-        - mountPath: "/var/lib/mysql"
+        - mountPath: "/"
           name: project-volume
         env: 
         - name: DATABASE_HOST
