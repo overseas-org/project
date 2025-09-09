@@ -24,9 +24,9 @@ spec:
         - containerPort: 5000
         env: 
         - name: DATABASE_HOST
-          value: "127.0.0.1"
+          value: "project-db"
         - name: DATABASE_PORT
-          value: "3308"
+          value: "3306"
         - name: DATABASE_USER
           value: "root"
         - name: DATABASE_PASSWORD
