@@ -11,5 +11,5 @@ CORS(app, supports_credentials=True)
 app.register_blueprint(crud)
 
 if __name__ == "__main__":
-	db = Database("project", DatabaseCreds(os.environ("DATABASE_HOST"), os.environ("DATABASE_USER"), os.environ("DATABASE_PASSWORD")))
+	db = Database("project", DatabaseCreds(os.getenv("DATABASE_HOST"), os.getenv("DATABASE_USER"), os.getenv("DATABASE_PASSWORD")))
 	app.run(host="0.0.0.0", debug=True, port=5000)
