@@ -17,6 +17,10 @@ spec:
         app: project-db
         service: project
     spec:
+      volumes:
+      - name: project-db-volume
+        persistentVolumeClaim:
+          claimName: project-db
       containers:
       - name: project-db-container
         image: mysql
@@ -25,3 +29,6 @@ spec:
         env: 
         - name: MYSQL_ROOT_PASSWORD
           value: "rootpw"
+        volumeMounts:
+        - mountPath: "/var/lib/mysql"
+          name: project-db-volume
