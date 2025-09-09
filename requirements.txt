@@ -1,3 +1,5 @@
 flask
 pytest
 flask_cors
+mysql_database
+crud_mysql
