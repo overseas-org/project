@@ -17,18 +17,11 @@ spec:
         app: project
         service: project
     spec:
-      volumes:
-      - name: project-volume
-        persistentVolumeClaim:
-          claimName: project
       containers:
       - name: project-container
         image: hhana982/project:1.<version>
         ports:
         - containerPort: 5000
-        volumeMounts:
-        - mountPath: "/"
-          name: project-volume
         env: 
         - name: DATABASE_HOST
           value: "project-db"
